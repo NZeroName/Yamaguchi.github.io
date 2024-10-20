@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="table-block">
+    <section class="table-block">
     <div class="table__container container">
         <div class="table">
             <div class="table__img">
@@ -30,29 +30,31 @@
             <div class="text-content__subtitle subtitle_mobile">Также столешница, обладающая меламиновым покрытием, хорошо переносит механические воздействия (царапины или удары), 
             при контакте с водой не разрушается, устойчиво переносит бытовые химические вещества и не выгорает под воздействием ультрафиолета.</div>
     </div>
-    </div>
-    <script>
-        let tableUpImg = document.querySelector('.table__img-up')
-        let btns = document.querySelector('.table__up-down')
-        btns.addEventListener('click', (e) => {
-            let windowWidth = window.innerWidth
-            if(e.target.classList.contains('down') && windowWidth > 1200){
-                tableUpImg.style.top = '6.5vw'
-                btns.style.top = '70%'
-            } else if (e.target.classList.contains('down') && windowWidth <= 1200) {
-                    tableUpImg.style.top = '14vw'
-                    btns.style.top = '65%'
-            } if(e.target.classList.contains('up')){
-                tableUpImg.style = ''
-                btns.style.top = ''
-            }
-        })
-        // Сделано для того, что бы когда стол опущен и меняем разрешение окна, не получалось так, что верхстола
-        // лежит внизу экрана
-        window.addEventListener('resize', ()=> {
-            tableUpImg.style = ''
-            btns.style.top = ''
-        })
-    </script>
+    </section>
+    <section class="dark-block">
+        <div class="dark-block__container">
+            <div class="dark-block__text-content">
+                <h1 class="dark-block__title">Yamaguchi Voice Control </h1>
+                <p class="dark-block__subtitle">
+                    Вы можете управлять программами массажа или самим креслом с помощью голосовых команд, приведённых ниже. 
+                    Коснитесь кратковременно кнопки голосового управления, расположенной на левом подлокотнике, для запуска сеанса голосового управления. 
+                    </p><p class="dark-block__subtitle">Произнесите одну из доступных команд. Если произнесённая команда распознана, вы услышите ответ и кресло приступит к выполнению запроса.
+                </p>
+            </div>
+            <div class="dark-block__woman">
+                <div class="woman-mask">
+                    <img class="woman" src="src/img/woman.png" alt="woman">
+                </div>
+                <div class="oval oval-open"></div>
+            </div>
+            <div class="dark-block__interface"> <img src="src/img/interface.png" alt="interface"></div>
+            <div class="dark-block__yamaguchi">
+                <span class="dark-block__telme">СКАЖИ:</span><br>
+ <span class="dark-block__ok-yamaguchi">«ОКЕЙ,ЯМАГУЧИ»</span>
+</div>
+        </div>
+    </section>
+    <script src="src/script/main.js"></script>
+    <script src="src/script/scrollanimation.js"></script>
 </body>
 </html>
